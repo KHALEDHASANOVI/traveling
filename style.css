@@ -1,0 +1,612 @@
+/* common css start */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+section {
+  padding: 0 0 100px 0px;
+}
+/* common css end */
+
+/* Header Area */
+.logo {
+  float: left;
+  width: 25%;
+}
+.main-menu {
+  float: left;
+  width: 45%;
+}
+.header-right {
+  float: right;
+  width: 30%;
+  text-align: right;
+}
+.main-menu nav ul li {
+  display: inline-block;
+}
+.main-menu nav ul li a {
+  display: block;
+  padding: 14px 10px 14px 10px;
+}
+.header-area {
+  padding: 20px 0;
+}
+.main-menu {
+  text-align: center;
+}
+.social-link a {
+  font-size: 16px;
+  padding-right: 15px;
+}
+.filled-btn {
+  background-color: #0d99ff;
+  color: #fff;
+  padding: 14px 20px;
+  display: inline-block;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.main-menu nav ul li {
+  position: relative;
+  z-index: 1;
+}
+.main-menu nav ul li:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 4px;
+  border-bottom: 5px;
+  background-color: #0d99ff;
+  transition: 0.3s;
+  animation-name: scale;
+  animation-duration: 0.3s;
+  animation-direction: reverse;
+  transform: scale(0);
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.main-menu nav ul li:hover:after {
+  width: 100%;
+  transform: scale(1);
+  text-align: center;
+}
+.main-menu nav ul li.active:after {
+  width: 100%;
+  transform: scale(1);
+}
+/* Main Blog */
+
+/* Subscription Area */
+.subscription-area {
+  background-image: url(assets/img/blog_img_4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  background-attachment: scroll;
+  position: relative;
+  z-index: 1;
+}
+.subscription-area:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  z-index: -1;
+  opacity: 0.5;
+}
+.subscription-area {
+  padding: 80px 0;
+  background-color: #ddd;
+  text-align: center;
+}
+.subscription-content {
+  width: 60%;
+  margin: 0 auto;
+}
+.subscription-content h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+.subscription-content p {
+  margin-bottom: 25px;
+  color: #fff;
+}
+.subscription-content form input {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 30px;
+  border: 1px solid #0d99ff;
+  border-radius: 5px;
+  background-color: #0d99ff17;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.subscription-content form input::placeholder {
+  color: #fff;
+}
+.subscription-content form button {
+  padding: 15px 40px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.subscription-content form input:focus {
+  outline: 0;
+}
+/*  */
+/*  */
+.footer_area {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0px;
+}
+.ft_group_one {
+  flex-basis: 41.66%;
+}
+.ft_group_one img {
+  margin-bottom: 20px;
+}
+.ft_group_one p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+.ft_group_tow {
+  flex-basis: 16.66%;
+}
+.ft_group_three {
+  flex-basis: 16.66%;
+}
+.ft_group_four {
+  flex-basis: 15%;
+}
+.ft_group_tow a,
+.ft_group_three a {
+  display: block;
+  padding: 5px 0px;
+}
+.ft_group_tow h4,
+.ft_group_three h4 {
+  margin-bottom: 15px;
+}
+.ft_group_four .social_icon i:first-child {
+  padding-left: 0;
+}
+.copy_right {
+  text-align: center;
+  padding-bottom: 10px;
+}
+/* ============= */
+
+.common_button a {
+  display: inline-block;
+  background-color: yellow;
+  padding: 10px 20px;
+  font-weight: 500;
+  margin-top: 15px;
+  border-radius: 15px;
+}
+
+/* ====== index.html css start ====== */
+
+/* slider_area css start  */
+.slider_area {
+  background: url(assets/img/home/1.jpg) no-repeat scroll top center/cover;
+  position: relative;
+  z-index: 1;
+  height: 685px;
+}
+.slider_area:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  z-index: -1;
+  opacity: 0.5;
+}
+.slider-content {
+  color: white;
+  margin: 200px auto;
+  display: inline-block;
+  max-width: 600px;
+}
+.slider-content h2 {
+  font-size: 46px;
+  font-weight: 700;
+}
+.slider-content p {
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+.common_button i {
+  font-size: 20px;
+  margin: 0 0 0 5px;
+}
+/* slider_area css end  */
+
+/* intro_area css start */
+.intro_content {
+  display: flex;
+  justify-content: space-between;
+}
+.intro_left {
+  flex-basis: 100%;
+  margin-right: 30px;
+  background: url(assets/img/home/2.jpg) no-repeat scroll top center/cover;
+  position: relative;
+  z-index: -1;
+  border-radius: 15px;
+}
+
+.intro_left:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  z-index: 1;
+  opacity: 0.5;
+  border-radius: 15px;
+}
+.intro_left i {
+  font-size: 66px;
+  color: yellow;
+  transform: translate(300px, 205px);
+  z-index: 3;
+}
+.intro_right {
+  flex-basis: 65%;
+  padding-left: 50px;
+}
+.intro_right h4 {
+  padding-top: 20px;
+  font-size: 24px;
+  line-height: 39px;
+}
+.intro_right p {
+  padding-bottom: 12px;
+}
+/* intro_area css end */
+
+/* places_visited_area css start */
+
+.places_visited_area h2 {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 45px;
+}
+.places_visited_content {
+  display: flex;
+  justify-content: space-between;
+}
+.single_places {
+  flex-basis: 30%;
+  position: relative;
+  margin-bottom: 30px;
+}
+.single_places_content {
+  position: absolute;
+  content: "";
+  top: 45%;
+  left: 25px;
+  max-width: 300px;
+  color: white;
+}
+.single_places_content h4 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 46px;
+}
+.single_places_content h5 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 39px;
+}
+.single_places_content p {
+  line-height: 20px;
+  padding-bottom: 20px;
+}
+.common_but a {
+  color: white;
+}
+.middle {
+  display: flex;
+  justify-content: center;
+}
+/* places_visited_area css end */
+
+/* latest_travel_guide css start */
+.latest_travel_area {
+  background: url(assets/img/home/10.jpg) no-repeat scroll top center/cover;
+  position: relative;
+  z-index: 1;
+  height: 685px;
+}
+.latest_travel_area:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  z-index: -1;
+  opacity: 0.5;
+}
+.latest_travel_conntent {
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+  padding-top: 20%;
+}
+.latest_travel_conntent h2 {
+  font-size: 38px;
+  text-align: center;
+}
+.latest_travel_conntent p {
+  font-size: 18px;
+  text-align: center;
+  padding: 25px 0 25px 0;
+}
+.middle a {
+  padding: 15px 30px;
+}
+/* latest_travel_guide css end */
+
+/* latest_posts css start */
+.latest_posts_area h2 {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 45px;
+}
+.latest_posts_content {
+  display: flex;
+  justify-content: space-between;
+}
+.single_posts {
+  flex-basis: 30%;
+  margin-bottom: 30px;
+}
+.single_posts_content {
+  max-width: 300px;
+  color: black;
+  padding: 20px;
+}
+.single_posts_content h4 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 30px;
+  padding-bottom: 15px;
+}
+.single_posts_content p {
+  line-height: 20px;
+  padding-bottom: 20px;
+}
+.common_butt a {
+  color: black;
+}
+.middle {
+  display: flex;
+  justify-content: center;
+}
+/* latest_posts css end */
+
+/* my_tours css start */
+.my_tours_area h2 {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 45px;
+}
+.single_tours {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+.single_tours_left {
+  flex-basis: 100%;
+  padding-right: 30px;
+}
+.single_tours_right {
+  max-width: 550px;
+  color: black;
+  padding: 50px 50px 0px 50px;
+}
+.single_tours_right h4 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 30px;
+  padding-bottom: 15px;
+}
+.single_tours_right p {
+  line-height: 20px;
+  padding-bottom: 20px;
+}
+.common_butt a {
+  color: black;
+}
+.middle {
+  display: flex;
+  justify-content: center;
+}
+/* my_tours css end */
+
+/* ====== index.html css end ====== */
+
+/* ====== blog.html css start ====== */
+
+.blog-post-wrapper {
+  width: 70%;
+  padding-right: 30px;
+  float: left;
+  border-right: 1px solid #e5e5e5;
+}
+
+.sidebar {
+  width: 30%;
+  padding-left: 30px;
+  float: right;
+}
+
+.blog-area {
+  padding-top: 65px;
+  padding-bottom: 82px;
+}
+
+.blog-post {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-post .blog-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.blog-post .blog-meta {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.blog-meta:after {
+  content: "/";
+}
+
+.blog-meta:last-child:after {
+  content: "";
+}
+
+.blog-meta-wrapper {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.blog-post .blog-thumbnail img {
+  border-radius: 5px;
+}
+
+.blog-post .blog-thumbnail {
+  margin-bottom: 12px;
+  display: block;
+}
+
+.blog-post p {
+  margin-bottom: 20px;
+  line-height: 27.9px;
+}
+
+.blog-post-wrapper .blog-post:last-child {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-meta:after {
+  content: "/";
+}
+
+.blog-meta:last-child:after {
+  content: "";
+}
+
+.blog-meta-wrapper {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.blog-post .blog-thumbnail img {
+  border-radius: 5px;
+}
+
+.blog-post .blog-thumbnail {
+  margin-bottom: 12px;
+  display: block;
+}
+
+.blog-post p {
+  margin-bottom: 20px;
+  line-height: 27.9px;
+}
+
+.blog-post-wrapper .blog-post:last-child {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.widget .widget-tile {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+
+.widget {
+  margin-bottom: 48px;
+}
+
+.widget .widget-links a {
+  margin-bottom: 13px;
+  display: block;
+  line-height: 29px;
+}
+
+.widget .widget-links a:last-child {
+  margin-bottom: 0;
+}
+
+/* ====== blog.html css end ====== */
